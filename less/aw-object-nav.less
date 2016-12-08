@@ -1,0 +1,254 @@
+//
+// AidWorks object navigator
+// --------------------------------------------------
+
+
+
+.relatedRecordsMenu {
+	list-style: none; 
+	margin: 3px; 
+	display: table; 
+	//max-width: 90%; 
+	border-spacing: 0px; 
+	width: 100%;
+	display: block;
+	background-color: @gray-lighter;
+	-webkit-padding-start: 0px;
+	padding-start: 0px;
+}
+.relatedRecordsMenu > li {
+	margin: 3px; 
+	height: 48px; 
+	vertical-align: middle; 
+	display: table-cell; 
+	position: relative;
+}
+.relatedRecordsMenu > li::before {
+	border-width: 24px 0px 24px 24px; 
+	border-style: solid; 
+	border-color: transparent transparent transparent rgb(255, 255, 255); 
+	left: 0px; 
+	top: 0px; 
+	width: 0px; 
+	height: 0px; 
+	position: absolute; 
+	z-index: 0; 
+	content: " ";
+}
+.relatedRecordsMenu > li:first-child::before {
+	border-color: transparent;
+}
+.relatedRecordsMenu > li a {
+	height: 48px; color: rgb(51, 51, 51); 
+	overflow: hidden; 
+	text-decoration: none; 
+	display: block; 
+	background-color: rgb(204, 204, 204);
+}
+.relatedRecordsMenu > li a::after {
+	border-width: 24px 0px 24px 24px; 
+	border-style: solid; 
+	border-color: transparent transparent transparent rgb(255, 255, 255); 
+	top: 0px; 
+	width: 0px; 
+	height: 0px; 
+	right: -24px; 
+	position: absolute; 
+	z-index: 10; 
+	content: " ";
+}
+.relatedRecordsMenu > li a span {
+	margin: 2px 10px 0px 32px; 
+	top: 50%; 
+	line-height: 14px; 
+	overflow: hidden; 
+	padding-bottom: 2px; 
+	font-size: 1.1em; 
+	font-weight: 400;
+	display: block; 
+	position: relative; 
+	max-height: 28px; 
+	transform: translateY(-50%);
+}
+
+span.relatedRecordsNumber {
+	font-weight: 200 !important;
+	display: inline !important;
+	position: relative !important;
+	margin: 0px!important; 
+}
+
+
+
+
+// shaded colours
+.relatedRecordsMenu > li:first-child a span {
+	margin-left: 15px;
+}
+.relatedRecordsMenu > li.Program a {
+	background-color: @program-secondary;
+}
+.relatedRecordsMenu > li.Program a::after {
+	border-left-color: @program-secondary;
+}
+.relatedRecordsMenu > li.Program.Fund a {
+	background-color: @program-fund-secondary;
+}
+.relatedRecordsMenu > li.Program.Fund a::after {
+	border-left-color: @program-fund-secondary;
+}
+.relatedRecordsMenu > li.Investment a {
+	background-color: @investment-secondary;
+}
+.relatedRecordsMenu > li.Investment a::after {
+	border-left-color: @investment-secondary;
+}
+.relatedRecordsMenu > li.Activity a {
+	background-color: @activity-secondary;
+}
+.relatedRecordsMenu > li.Activity a::after {
+	border-left-color: @activity-secondary;
+}
+.relatedRecordsMenu > li.Agreement a {
+	background-color: @agreement-secondary;
+}
+.relatedRecordsMenu > li.Agreement a::after {
+	border-left-color: @agreement-secondary;
+}
+.relatedRecordsMenu > li a:hover {
+	color: rgb(0, 0, 0);
+}
+
+
+// hover colours
+.relatedRecordsMenu > li.Program a:hover {
+	background-color: @program-primary;
+}
+.relatedRecordsMenu > li.Program a:hover::after {
+	border-left-color: @program-primary;
+}
+.relatedRecordsMenu > li.Program.Fund a:hover {
+	background-color: @program-fund-primary;
+}
+.relatedRecordsMenu > li.Program.Fund a:hover::after {
+	border-left-color: @program-fund-primary;
+}
+.relatedRecordsMenu > li.Investment a:hover {
+	background-color: @investment-primary;
+}
+.relatedRecordsMenu > li.Investment a:hover::after {
+	border-left-color: @investment-primary;
+}
+.relatedRecordsMenu > li.Activity a:hover {
+	background-color: @activity-primary;
+}
+.relatedRecordsMenu > li.Activity a:hover::after {
+	border-left-color: @activity-primary;
+}
+.relatedRecordsMenu > li.Agreement a:hover {
+	background-color: @agreement-primary;
+}
+.relatedRecordsMenu > li.Agreement a:hover::after {
+	border-left-color: @agreement-primary;
+}
+
+
+// solid colours
+.relatedRecordsMenu > li.selected a span{
+	color: rgb(0, 0, 0); 
+	font-weight: 700 !important;
+}
+.relatedRecordsMenu > li.Program.selected a {
+	background-color: @program-primary;
+}
+.relatedRecordsMenu > li.Program.selected a::after {
+	border-left-color: @program-primary;
+}
+.relatedRecordsMenu > li.Program.Fund.selected a {
+	background-color: @program-fund-primary;
+}
+.relatedRecordsMenu > li.Program.Fund.selected a::after {
+	border-left-color: @program-fund-primary;
+}
+.relatedRecordsMenu > li.Investment.selected a {
+	background-color: @investment-primary;
+}
+.relatedRecordsMenu > li.Investment.selected a::after {
+	border-left-color: @investment-primary;
+}
+.relatedRecordsMenu > li.Activity.selected a {
+	background-color: @activity-primary;
+}
+.relatedRecordsMenu > li.Activity.selected a::after {
+	border-left-color: @activity-primary;
+}
+.relatedRecordsMenu > li.Agreement.selected a {
+	background-color: @agreement-primary;
+}
+.relatedRecordsMenu > li.Agreement.selected a::after {
+	border-left-color: @agreement-primary;
+}
+.relatedRecordsMenu::after {
+	clear: both; display: table; content: "";
+}
+
+
+
+
+// Drop-down panels
+.qtip-panel .progress {
+	margin: 40px auto;
+}
+.qtip-panel {
+	-ms-overflow-x: hidden; -ms-overflow-y: auto; 
+	min-height: 90px; 
+	max-height: 450px; 
+	min-width: 450px; 
+	background-color: rgb(255, 255, 255);
+	overflow-x: auto;
+	
+}
+.qtip-aw .noData {
+	width: 275px; height: 100px; 
+	text-align: center; 
+	color: rgb(204, 204, 204); 
+	vertical-align: middle; 
+	display: table-cell;
+}
+.relatedRecordPanel {
+	padding: 1px; 
+	width: 278px;
+}
+.relatedRecordPanel ul {
+	list-style-type: none;
+}
+.relatedRecordPanel li a {
+	//background-position: 2px 5px; 
+	margin: 1px; 
+	padding: 8px 8px 8px 20px; 
+	color: @gray-light; 
+	font-size: 0.9em; 
+	text-decoration: none; 
+	display: block; 
+	//background-image: url("../images/icon-dot.png"); 
+	//background-repeat: no-repeat; 
+	background-color: @gray-lightest;
+	line-height: 1.4;
+}
+
+
+.relatedRecordPanel li:first-child a {
+	//border-radius: 2px 2px 0px 0px;
+}
+.relatedRecordPanel li:last-child a {
+	//border-radius: 0px 0px 2px 2px;
+}
+.relatedRecordPanel li a.active {
+	color: @gray-base; 
+	border-left:6px solid @brand-success;
+	padding-left: 14px;
+	//background-image: url("../images/icon-dot-green.png");
+}
+.relatedRecordPanel li a:hover {
+	background-color: @gray-lighter;
+}
